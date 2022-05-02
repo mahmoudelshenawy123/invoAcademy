@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="223" height="140.797" viewBox="0 0 223 140.797">
+  <g id="Group_10555" data-name="Group 10555" transform="translate(-849 -95)">
+    <text id="Sign_up_as_a_student" data-name="Sign up as a student" transform="translate(849 228.797)" fill="#121212" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600" opacity="0"><tspan x="0" y="0">SIGN UP AS A STUDENT</tspan></text>
+    <g id="Group_10149" data-name="Group 10149" transform="translate(907.686 95)">
+      <g id="Group_1" data-name="Group 1" transform="translate(0)">
+        <path id="Path_1" data-name="Path 1" d="M331.641,423.046A24.055,24.055,0,1,0,355.7,447.1,24.055,24.055,0,0,0,331.641,423.046Zm0,35.17A11.115,11.115,0,1,1,342.756,447.1,11.115,11.115,0,0,1,331.641,458.216Z" transform="translate(-279.242 -394.702)" fill="#4807e6"/>
+        <circle id="Ellipse_1" data-name="Ellipse 1" cx="11.115" cy="11.115" r="11.115" transform="translate(41.284)" fill="#4807e6"/>
+        <circle id="Ellipse_2" data-name="Ellipse 2" cx="11.115" cy="11.115" r="11.115" transform="translate(70.476 12.092)" fill="#4807e6"/>
+        <circle id="Ellipse_3" data-name="Ellipse 3" cx="11.115" cy="11.115" r="11.115" transform="translate(82.567 41.284)" fill="#4807e6"/>
+        <circle id="Ellipse_4" data-name="Ellipse 4" cx="11.115" cy="11.115" r="11.115" transform="translate(70.476 70.476)" fill="#4807e6"/>
+        <circle id="Ellipse_5" data-name="Ellipse 5" cx="11.115" cy="11.115" r="11.115" transform="translate(41.284 82.567)" fill="#4807e6"/>
+        <circle id="Ellipse_6" data-name="Ellipse 6" cx="11.115" cy="11.115" r="11.115" transform="translate(12.092 70.476)" fill="#4807e6"/>
+        <circle id="Ellipse_7" data-name="Ellipse 7" cx="11.115" cy="11.115" r="11.115" transform="translate(0 41.284)" fill="#4807e6"/>
+        <circle id="Ellipse_8" data-name="Ellipse 8" cx="11.115" cy="11.115" r="11.115" transform="translate(12.092 12.092)" fill="#4807e6"/>
+      </g>
+    </g>
+    <circle id="Ellipse_216" data-name="Ellipse 216" cx="22" cy="22" r="22" transform="translate(938 125.314)" fill="#4807e6" opacity="0"/>
+    <g id="Search_results_for_Student_-_Flaticon-2_1_" data-name="Search results for Student - Flaticon-2 (1)" transform="translate(946.283 131.107)" opacity="0">
+      <g id="Group_10212" data-name="Group 10212" transform="translate(0 0)">
+        <ellipse id="Ellipse_207" data-name="Ellipse 207" cx="5.385" cy="5.048" rx="5.385" ry="5.048" transform="translate(7.82)" fill="#fff"/>
+        <path id="Path_3256" data-name="Path 3256" d="M150.173,181.515a7.048,7.048,0,0,1-7.672,0,10.738,10.738,0,0,0-3.34,2.04l7.176,2.691,7.176-2.691A10.737,10.737,0,0,0,150.173,181.515Z" transform="translate(-133.132 -170.609)" fill="#fff"/>
+        <path id="Path_3257" data-name="Path 3257" d="M412.535,310h-.614a.921.921,0,0,0-.921.921v2.457a.921.921,0,0,0,.921.921h.614a2.15,2.15,0,1,0,0-4.3Z" transform="translate(-388.276 -291.203)" fill="#fff"/>
+        <path id="Path_3258" data-name="Path 3258" d="M81.4,231.768a.921.921,0,0,0-.4.757v2.051h.307a2.767,2.767,0,0,1,2.764,2.764V239.8a2.767,2.767,0,0,1-2.764,2.764H81V244.5a.921.921,0,0,0,.6.863l9.229,3.461V234.881l-8.582-3.218A.921.921,0,0,0,81.4,231.768Z" transform="translate(-78.543 -217.621)" fill="#fff"/>
+        <path id="Path_3259" data-name="Path 3259" d="M277.756,239.8V237.34a2.767,2.767,0,0,1,2.764-2.764h.307v-2.051a.921.921,0,0,0-1.245-.863L271,234.881v13.944l9.229-3.461a.921.921,0,0,0,.6-.863V242.56h-.307A2.767,2.767,0,0,1,277.756,239.8Z" transform="translate(-256.874 -217.621)" fill="#fff"/>
+        <path id="Path_3260" data-name="Path 3260" d="M44.685,313.378v-2.457a.921.921,0,0,0-.921-.921H43.15a2.15,2.15,0,0,0,0,4.3h.614A.921.921,0,0,0,44.685,313.378Z" transform="translate(-41 -291.203)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
