@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>INVO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./assets/imgs/logoLight.svg">
+
+  <link href="assets/css/fontello-embedded.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <script src="./assets/js/svg-loader.min.js" async></script>
+  <link rel="stylesheet" href="./assets/css/aos.css" />
+
+
+  <link href="assets/css/style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg main-navbar ">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <svg data-src="./assets/imgs/logo3.svg"></svg>
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-menu-3"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav w-100 mx-auto">
+              <li class="nav-item navbar__menu-items active ml-lg-auto">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item navbar__menu-items">
+                <a class="nav-link" href="#">Courses</a>
+              </li>
+              <li class="nav-item navbar__menu-items">
+                <a class="nav-link" href="#">Exams</a>
+              </li>
+              <li class="nav-item navbar__menu-items mr-lg-auto">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item mx-lg-auto">
+                <a class="nav-link" href="#">
+                  <svg data-src="./assets/imgs/search.svg" class="navbar__search-icon" onClick="toggleSearch()"></svg>
+                </a>
+              </li>
+              
+              <li class="nav-item dropdown d-none">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                  <img src="./assets/imgs/profile.png" class="navbar__profile-img" alt="profile picture">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item navbar__register-item ml-lg-auto ">
+                <a class="nav-link " href="#">Register</a>
+              </li>
+              <form class="navbar__search-form js-navbar__search-form">
+                <input class="form-control" type="search" placeholder="Search by Name , Id , etc">
+              </form>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <nav class="breadcrumb-nav">
+      <div class="container-fluid">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">
+            <svg data-src="./assets/imgs/home.svg" class="breadcrumb-nav__home-icon"></svg>
+          </a></li>
+          <li class="breadcrumb-item"><a href="#">Exams</a></li>
+          <li class="breadcrumb-item"><a href="#">SAT</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Test Name</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="test">
+      <div class="container-fluid">
+        <div class="test__controls">
+          <button class="test__control-button btn" data-toggle="modal" data-target="#test-navigation" type="button">
+            <svg data-src="./assets/imgs/question.svg" class="test__control-button-icon"></svg>
+          </button>
+          
+          <button class="test__control-button btn" onClick="flagQuestion()">
+            <svg data-src="./assets/imgs/flag.svg" class="test__control-button-icon"></svg>
+          </button>
+          <button class="test__control-button btn">
+            <svg data-src="./assets/imgs/aPlus.svg" class="test__control-button-icon"></svg>
+          </button>
+          <button class="test__control-button btn">
+            <svg data-src="./assets/imgs/aMinus.svg" class="test__control-button-icon"></svg>
+          </button>
+          <button class="test__control-end-task  btn mx-auto" data-toggle="modal" data-target="#end-exam" type="button">
+            End Task
+          </button>
+          <div class="test__timer-cont">
+              <svg data-src="./assets/imgs/timer.svg" class="test__control-button-icon"></svg>
+            <span class="test__show-time js-test__show-time-min">
+              20
+            </span>:
+            <span class="test__show-time js-test__show-time-sec">
+              85
+            </span>
+          </div>
+        </div>
+
+        <div class="modal fade test-navigation" id="test-navigation" tabindex="-1" aria-labelledby="test-navigation" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="container-fluid">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="test-navigation-title">Question Navigation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <svg data-src="./assets/imgs/exit.svg" class="modal__exit-icon"></svg>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="test-navigation__filters m-auto">
+                      <div class="test-navigation__filter">
+                        <button class=" btn test-navigation__filter-button js-test-navigation__filter-button active" onclick="filterNavigation(event)">All</button>
+                      </div>
+                      <div class="test-navigation__filter">
+                        <button class=" btn test-navigation__filter-button js-test-navigation__filter-button" onclick="filterNavigation(event)">Answered</button>
+                      </div>
+                      <div class="test-navigation__filter">
+                        <button class=" btn test-navigation__filter-button js-test-navigation__filter-button" onclick="filterNavigation(event)">Not Answered</button>
+                      </div>
+                      <div class="test-navigation__filter">
+                        <button class=" btn test-navigation__filter-button js-test-navigation__filter-button" onclick="filterNavigation(event)">Flagged</button>
+                      </div>
+                      <div class="test-navigation__filter">
+                        <button class=" btn test-navigation__filter-button js-test-navigation__filter-button" onclick="filterNavigation(event)">Not Flagged</button>
+                      </div>
+                    </div>
+                    <table class="table test-navigation__table">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">State</th>
+                          <th scope="col">Flagged</th>
+                          <th scope="col">Your Answer Number</th>
+                        </tr>
+                      </thead>
+                      <tbody class="js-test-navigation__table-tbody">
+                        <!-- <tr>
+                          <a class="test-navigation__link js-test-navigation__link" onClick="navigatetoQuestion()"></a>
+                          <th scope="row">1</th>
+                          <td>Answered</td>
+                          <td class="test-navigation__table-cell">
+                            <input type="checkbox" class="form-check-input test-navigation__table-flag" >
+                          </td>
+                          <td>Not Answered Yet</td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                  </div>
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="end-exam" tabindex="-1" aria-labelledby="nd-exam" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="container-fluid">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="nd-exam-title">End Exam</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <svg data-src="./assets/imgs/exit.svg" class="modal__exit-icon"></svg>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <button class="end_exam btn">
+                      end exam
+                    </button>
+                  </div>
+                </div>
+                  
+              </div>
+            </div>
+        </div>
+
+        <div class="test__content-container js-test__content-container">
+
+        <!-- <div class="test__content js-test__content d-none type-one"> -->
+          
+        <!-- <div class="test__content js-test__content" data-question-number="1">
+
+          <div class="test__info">
+              <h2 class="test__info-heading">
+                Questions 1-10 are based on the following passage.
+              </h2>
+              <p>
+                Akira came directly, breaking all tradition. Was that it? Had he followed form had he asked his mother to speak to his father to approach a Line go-between would Chie have been more receptive? He came on a winter’s eve. He pounded on the door while a cold rain beat on the shuttered veranda, so at first Chie thought him only the wind. The maid knew better. Chie heard her soft scuttling footsteps, the creak of the door. Then the maid brought a 10 calling card to the drawing room, for Chie.
+              </p>
+              <p>
+                Chie was reluctant to go to her guest; perhaps she was feeling too cozy. She and Naomi were reading at a low table set atop a charcoal brazier. A thick quilt spread over the sides of the table so their legs were 15 tucked inside with the heat. “Who is it at this hour, in this weather?” Chie questioned as she picked the name card off the maid’s lacquer tray.
+              </p>
+              <p>
+                Chie was reluctant to go to her guest; perhaps she was feeling too cozy. She and Naomi were reading at a low table set atop a charcoal brazier. A thick quilt spread over the sides of the table so their legs were 15 tucked inside with the heat. “Who is it at this hour, in this weather?” Chie questioned as she picked the name card off the maid’s lacquer tray.
+              </p>
+              <p>
+                Chie was reluctant to go to her guest; perhaps she was feeling too cozy. She and Naomi were reading at a low table set atop a charcoal brazier. A thick quilt spread over the sides of the table so their legs were 15 tucked inside with the heat. “Who is it at this hour, in this weather?” Chie questioned as she picked the name card off the maid’s lacquer tray.
+              </p>
+          </div>
+
+          <div class="test__question js-test__question type-input">
+          <div class="test__question js-test__question">
+            <h2 class="test__question-heading">
+              Which choice best describes what happens in the passage?
+            </h2>
+
+            <div class="test__input-answer">
+              <input type="text" class="form-control" name="test__input-answer1" placeholder="">
+            </div>
+
+            <div class="test__choices">
+              <div class="test__choice">
+                <input type="radio" class="forn-control test__choice-radio" name="test__choices1" value="1" id="test__choices11">
+                <label for="test__choices11">
+                  <span class="test__choice-alpha">A- </span>One Character Argues With Another Character Who Intrudes On  
+                </label>
+              </div>
+              <div class="test__choice">
+                <input type="radio" class="forn-control test__choice-radio" name="test__choices1" value="1" id="test__choices12">
+                <label for="test__choices12">
+                  <span class="test__choice-alpha">B- </span>One Character Receives A Surprising Request From  
+                </label>
+              </div>
+              <div class="test__choice">
+                <input type="radio" class="forn-control test__choice-radio" name="test__choices1" value="1" id="test__choices13">
+                <label for="test__choices13">
+                  <span class="test__choice-alpha">C-</span> One Character Reminisces About Choices She Has Made
+                </label>
+              </div>
+              <div class="test__choice">
+                <input type="radio" class="forn-control test__choice-radio" name="test__choices1" value="1" id="test__choices14">
+                <label for="test__choices14">
+                  <span class="test__choice-alpha">D-</span>One Character Criticizes Another Character For x AnOf Action
+                </label>
+              </div>
+            </div>
+            
+          </div>
+        </div> -->
+        
+      </div>
+
+
+        <div class="test__pagination">
+          <button class="test__pagintaion-control-button test__prev-button" onClick="getNextPrevQuestion('prev')">
+            <svg data-src="./assets/imgs/leftAnglePag.svg" class=""></svg>
+          </button>
+          <ul class="test__pagination-list js-test__pagination-list">
+            <!-- <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link"
+                onClick="navigateQuestionPagination(event,1)" data-question-number="1">1</a>
+            </li>
+            <li class="test__pagination-item ">
+              <a class="test__pagination-link js-test__pagination-link"
+              onClick="navigateQuestionPagination(event,2)" data-question-number="2">2</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link"
+              onClick="navigateQuestionPagination(event,3)" data-question-number="3">3</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link active">4</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link ">5</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">6</a>
+            </li>
+            <li class="test__pagination-item ">
+              <a class="test__pagination-link js-test__pagination-link">7</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">8</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">9</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">10</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">11</a>
+            </li>
+            <li class="test__pagination-item ">
+              <a class="test__pagination-link js-test__pagination-link">12</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">13</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">14</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">15</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">16</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">17</a>
+            </li>
+            <li class="test__pagination-item ">
+              <a class="test__pagination-link js-test__pagination-link">18</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">19</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">20</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">21</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">1</a>
+            </li>
+            <li class="test__pagination-item ">
+              <a class="test__pagination-link js-test__pagination-link">2</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">3</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">4</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">5</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">6</a>
+            </li>
+            <li class="test__pagination-item ">
+              <a class="test__pagination-link js-test__pagination-link">7</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">8</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">9</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">10</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">11</a>
+            </li>
+            <li class="test__pagination-item ">
+              <a class="test__pagination-link js-test__pagination-link">12</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">13</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">14</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">15</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">16</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">17</a>
+            </li>
+            <li class="test__pagination-item ">
+              <a class="test__pagination-link js-test__pagination-link">18</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">19</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">20</a>
+            </li>
+            <li class="test__pagination-item">
+              <a class="test__pagination-link js-test__pagination-link">21</a>
+            </li> -->
+          </ul>
+          <button class="test__pagintaion-control-button test__next-button" onClick="getNextPrevQuestion('next')">
+            <svg data-src="./assets/imgs/rightAnglePag.svg" class=""></svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    </section>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./assets/js/aos.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/test.js"></script>
+    <script>
+    AOS.init();
+    // $('#test-navigation').modal('show')
+    // $('#test-navigation').on('hide.bs.modal', function (event) {
+    //   console.log('asddasas')
+    //   document.querySelector('html').classList.add('hide-scrollbar')
+    // })
+    // $('#test-navigation').on('show.bs.modal', function (event) {
+    //   console.log('asddasas')
+
+    //   document.querySelector('html').classList.add('hide-scrollbar')
+    // })
+        // document.querySelector(".yearSpan").textContent=new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
